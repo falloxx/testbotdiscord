@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
 const client = new Client({
   intents: [
@@ -29,9 +30,7 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(
-  "MTIwODc4Mjg1ODE3NzQ4NjkyOQ.GvOdW-._MZnlePn-rwDDCLWXbUyNEgxI4TG_WbSnG3xp0"
-);
+client.login(process.env.DISCORD_TOKEN);
 
 const apiKey = "b7f3e399a51c75a192171090ffeeea8e";
 
